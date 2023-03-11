@@ -1,0 +1,62 @@
+input[type="date"] {
+    display:block;
+    position:relative;
+    padding:1rem 3.5rem 1rem 0.75rem;
+    
+    font-family: $font-family--primary;
+    font-size:1rem;
+    font-family:monospace;
+    
+    border:1px solid #8292a2;
+    border-radius:0.25rem;
+    
+    cursor:pointer;
+  }
+  input[type="date"]:focus {
+    outline:none;
+    border-color: $color-brand--30;
+  }
+  
+//   ::-webkit-datetime-edit {}
+//   ::-webkit-datetime-edit-fields-wrapper {}
+  ::-webkit-datetime-edit-month-field:hover,
+  ::-webkit-datetime-edit-day-field:hover,
+  ::-webkit-datetime-edit-year-field:hover {
+    transform: scale(1.1);
+  }
+  ::-webkit-datetime-edit-text {
+    opacity:0;
+  }
+  ::-webkit-clear-button,
+  ::-webkit-inner-spin-button {
+    display:none;
+  }
+  ::-webkit-calendar-picker-indicator {
+    position:absolute;
+    width:2.5rem;
+    height:100%;
+    top:0;
+    right:0;
+    bottom:0;
+    
+    opacity: 1;
+    cursor:pointer;
+    
+    color: $color-brand;
+    background:
+      url(/src/img/calendar.svg)
+      center
+      center
+      no-repeat;
+    transition: transform 0.2s ease-in-out;
+   
+  }
+  
+  input[type="date"]:hover::-webkit-calendar-picker-indicator { 
+    transform: scale(1.03);
+    transition: transform 0.2s ease-in-out;
+  }
+  input[type="date"]:hover::-webkit-calendar-picker-indicator:hover { 
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out; }
+  
