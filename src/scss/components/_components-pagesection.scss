@@ -1,0 +1,49 @@
+/* ---------------------------------
+=page section
+--------------------------------- */
+
+.c-pagesection {
+  padding-top: calc(48 / 16 * 1rem);
+  padding-bottom: calc(48 / 16 * 1rem);
+
+  @include breakpoint(medium) {
+    padding-top: calc(72 / 16 * 1rem);
+    padding-bottom: calc(72 / 16 * 1rem);
+  }
+
+  @include breakpoint(large) {
+    padding-top: calc(120 / 16 * 1rem);
+    padding-bottom: calc(120 / 16 * 1rem);
+  }
+}
+
+/* ---------------------------------
+=variants of page sections
+--------------------------------- */
+
+.c-pagesection--article {
+  padding-top: 0;
+  
+  @include breakpoint(medium) {
+    //permets de laisser l'epace le menu nav
+    padding-top: 230px;
+  }
+}
+
+.c-pagesection--notop {
+  padding-top: 0;
+}
+.c-pagesection--nobottom {
+  padding-bottom: 0;
+}
+
+
+.c-pagesection--brand {
+  background: linear-gradient(var(--color-brand) 80%, var( --color-background) 75%);
+  color: var(--color-text-invert);
+
+  @include breakpoint(medium) {
+    //permets de laisser l'epace le menu nav
+    padding-top: 275px;
+  }
+}

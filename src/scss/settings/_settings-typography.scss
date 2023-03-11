@@ -1,0 +1,37 @@
+/* Import fonts */
+
+@font-face {
+  font-family: 'Switzer-Variable';
+  src: url('/src/fonts/Switzer-Variable.woff2') format('woff2'),
+       url('/src/fonts/Switzer-Variable.woff') format('woff'),
+       url('/src/fonts/Switzer-Variable.ttf') format('truetype');
+       font-weight: 100 900;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: 'Switzer-VariableItalic';
+  src: url('/src/fonts/Switzer-VariableItalic.woff2') format('woff2'),
+       url('/src/fonts/Switzer-VariableItalic.woff') format('woff'),
+       url('/src/fonts/Switzer-VariableItalic.ttf') format('truetype');
+       font-weight: 100 900;
+       font-display: swap;
+       font-style: italic;
+}
+
+@font-face {
+  font-family: 'Outfit-Variable';
+  src: url('/src/fonts/Outfit-Variable.woff2') format('woff2'),
+       url('/src/fonts/Outfit-Variable.woff') format('woff'),
+       url('/src/fonts/Outfit-Variable.ttf') format('truetype');
+       font-weight: 100 900;
+       font-display: swap;
+       font-style: normal;
+}
+
+:root {
+  --fontstack-main: 'Switzer-Variable', "Helvetica", "Arial", sans-serif;
+  --fontstack-italic: 'Switzer-VariableItalic', 'Switzer-Variable', sans-serif;
+  --fontstack-title: 'Outfit-Variable', "Helvetica", "Arial", sans-serif;
+}

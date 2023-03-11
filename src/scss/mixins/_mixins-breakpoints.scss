@@ -1,0 +1,30 @@
+// ---------------------------------
+// breakpoints
+// ---------------------------------
+
+// ---------------------------------
+// variables
+// ---------------------------------
+
+$breakpoints-map: (
+  "small": "all and (min-width: 500px)",
+  "medium": "all and (min-width: 760px)",
+  "large": "all and (min-width: 1024px)",
+  "xlarge": "all and (min-width: 1440px)",
+) !default;
+
+// ---------------------------------
+// mixin
+// ---------------------------------
+
+@mixin breakpoint($name) {
+  @if not map-has-key($breakpoints-map, $name) {
+    $breakpoints-keys: map-keys($breakpoints-map);
+    @error "\"#{$name}\" is not a value of $breakpoints-map. Allowed values are: #{$breakpoints-keys}";
+  }
+
+  $breakpoint-query: map-get($breakpoints-map, $name);
+  @media #{$breakpoint-query} {
+    @content;
+  }
+}

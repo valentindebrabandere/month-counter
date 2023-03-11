@@ -1,0 +1,38 @@
+{
+  "name": "loremipson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf \"./dist\"",
+    "server": "browser-sync start --server --no-open --files \"dist\" \"*.html\"",
+    "styles:dev": "sass --embed-source-map --source-map-urls=\"absolute\" \"./src/scss/main.scss\" \"./dist/css/main.css\"",
+    "scripts:dev": "esbuild \"./src/js/main.js\" --target=es6 --bundle --outfile=\"dist/js/main.js\"",
+    "scripts:prod": "esbuild \"./src/js/main.js\" --minify --target=es6 --bundle --outfile=\"dist/js/main.js\"",
+    "styles:prod": "sass --style=\"compressed\" --no-source-map \"./src/scss/main.scss\" \"./dist/css/main.css\"",
+    "watch:styles": "onchange \"./src/scss/**/*\" -- npm run styles:dev",
+    "watch:scripts": "onchange \"./src/js/**/*\" -- npm run scripts:dev",
+    "dev": "npm-run-all -p server watch:*",
+    "build": "npm-run-all clean -p scripts:prod styles:prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valentin-deB/loremIpson.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valentin-deB/loremIpson/issues"
+  },
+  "homepage": "https://github.com/valentin-deB/loremIpson#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "esbuild": "^0.16.16",
+    "luxon": "^3.1.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.56.1"
+  }
+}
