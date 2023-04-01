@@ -10,32 +10,70 @@
     <link rel="icon" type="image/x-icon" href="src/img/favicon.svg" />
 </head>
 <body>
-    <div class="c-pagesection">
-        <div class="l-container l-container--center">
-            <h1 class="c-title">Ou en es-tu ?</h1>
-            <article>
-                <form>
-                    <fieldset class="c-date-block">
-                        <label for="dateEntered">
-                            Entrez votre date de naissance
-                        </label>
-                        <input type="date" class="js-dateInput c-input-date" />
-                    </fieldset>
-                </form>
-            </article>
+    <header class="c-siteheader">
+        <div class="l-container">
+            <nav class="c-mainnav">
+                <a href="https://simontarea.com/">
+                    <img class="c-mainnav__logo" src="src/img/logo.svg" alt="Méthode Create">
+                </a>
+                <a href="https://simontarea.com/" class="c-mainnav__link">Voir mon site</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="c-pagesection">
             <div class="l-container l-container--center">
-                <div class="c-point-pool js-point-pool">
-                    <!-- injected code here -->
+                <h1 class="c-title">Ou en es-tu ?</h1>
+                <article>
+                    <form>
+                        <fieldset class="c-date-block">
+                            <label class="" for="dateEntered">
+                                Entrez votre date de naissance
+                            </label>
+                            <input type="date" class="js-dateInput c-input-date" />
+                        </fieldset>
+                    </form>
+                </article>
+                
+                <div class="c-interractif">
+                    <div class="c-point-pool js-point-pool">
+                        <!-- injected code here -->
+                    </div>
+                    <div class="c-stats">
+                        <h3> Vous avez déjà vécu :</h3>
+                        <p id="days"></p>
+                        <p id="weeks"></p>
+                        <p id="months"></p>
+                        <p id="years"></p>
+                    </div>
                 </div>
             </div>
-            <div>
-                <h3> Vous avez déjà vécu :</h3>
-                <p id="days"></p>
-                <p id="weeks"></p>
-                <p id="months"></p>
-                <p id="years"></p>
-            </div>
         </div>
+    </main>
+    <div class="l-container l-container--center">
+        <footer class="c-sitefooter">
+            <h3>Simon Tarea</h3>
+            <ul class="c-footer__socialmedia">
+                <li class="c-socialmedia__item">
+                  <a href="https://www.linkedin.com/in/simontarea" class="c-socialmedia__link">
+                    <img
+                      src="src/img/linkedin.svg"
+                      alt="Linkedin icon"
+                      class="c-socialmedia__icon"
+                    />
+                  </a>
+                </li>
+                <!-- <li class="c-socialmedia__item">
+                  <a href="#footer" class="c-socialmedia__link">
+                    <img
+                      src="src/img/youtube.svg"
+                      alt="Linkedin icon"
+                      class="c-socialmedia__icon"
+                    />
+                  </a>
+                </li> -->
+              </ul>
+        </footer>
     </div>
 </body>
 </html>
