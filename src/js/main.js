@@ -10,9 +10,9 @@ const MAX_AGE = 90;
 dateInput.setAttribute('max', today.toISOString().split('T')[0]);
 dateInput.setAttribute('min', new Date(today.getFullYear() - 90, today.getMonth(), today.getDate()).toISOString().split('T')[0]);
 
-// //default value test
-// dateInput.setAttribute('value', new Date(2000, 4, 27).toISOString().split('T')[0]);
-// getDays();
+//default value test
+dateInput.setAttribute('value', new Date(2000, 4, 27).toISOString().split('T')[0]);
+getDays();
 
 //addEvent listener to the date input call eacg time the date change
 dateInput.addEventListener('change', getDays);
@@ -57,11 +57,18 @@ function getDays() {
 
 // function create MAX_AGE*12 divs with the class c-month-point
 function createMonthPoint() {
-    for (let i = 0; i < MAX_AGE * 12; i++) {
+    for (let i = 0; i <= MAX_AGE * 12; i++) {
         const point = document.createElement('div');
         point.classList.add('c-month-point');
         pointsPool.appendChild(point);
         monthGrid.push(point);
+        if (i % (12*30) == 0) {
+            //create after element with i
+            const after = document.createElement('p');
+            after.classList.add('c-month-point--after');
+            after.innerHTML = i/12;
+            point.appendChild(after);
+        }
     }
 }
 

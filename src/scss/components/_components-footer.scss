@@ -3,7 +3,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 10vw;
 }
+
+.c-footer-moved{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .c-footer__socialmedia {
     display: flex;
