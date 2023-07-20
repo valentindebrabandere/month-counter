@@ -79,4 +79,9 @@ function displayDays(days, weeks, months, years) {
     document.getElementById("weeks").innerHTML = weeks + " semaines";
     document.getElementById("months").innerHTML = months + " mois";
     document.getElementById("years").innerHTML = years + " ans";
+
+    const MAX_MONTHS = MAX_AGE * 12;
+    const remainingMonths = MAX_MONTHS - months;
+    document.querySelector(".js-interractif__mounts").innerHTML = remainingMonths;
+    document.querySelector(".c-interractif__display").style.display = "block";
 }

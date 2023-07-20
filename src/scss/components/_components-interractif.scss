@@ -6,6 +6,17 @@
     gap: 60px;
 }
 
+.c-interractif__display{
+    display: none;
+}
+
+.c-interractif__title{
+    font-weight: 400;
+    >span{
+        font-weight: 700;
+    }
+}
+
 .c-stats{
     display: none;
     flex-direction: column;
