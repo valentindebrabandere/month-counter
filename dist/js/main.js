@@ -8,8 +8,6 @@
   var MAX_AGE = 90;
   dateInput.setAttribute("max", today.toISOString().split("T")[0]);
   dateInput.setAttribute("min", new Date(today.getFullYear() - 90, today.getMonth(), today.getDate()).toISOString().split("T")[0]);
-  dateInput.setAttribute("value", new Date(2e3, 5, 27).toISOString().split("T")[0]);
-  getDays();
   dateInput.addEventListener("change", getDays);
   function getDays() {
     if (firtTime) {
