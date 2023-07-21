@@ -10,9 +10,9 @@ const MAX_AGE = 90;
 dateInput.setAttribute('max', today.toISOString().split('T')[0]);
 dateInput.setAttribute('min', new Date(today.getFullYear() - 90, today.getMonth(), today.getDate()).toISOString().split('T')[0]);
 
-// //default value test
-// dateInput.setAttribute('value', new Date(2000, 4, 27).toISOString().split('T')[0]);
-// getDays();
+//default value test
+dateInput.setAttribute('value', new Date(2000, 5, 27).toISOString().split('T')[0]);
+getDays();
 
 //addEvent listener to the date input call eacg time the date change
 dateInput.addEventListener('change', getDays);
@@ -81,7 +81,9 @@ function displayDays(days, weeks, months, years) {
     document.getElementById("years").innerHTML = years + " ans";
 
     const MAX_MONTHS = MAX_AGE * 12;
+    const remainingYears = MAX_AGE - years;
     const remainingMonths = MAX_MONTHS - months;
     document.querySelector(".js-interractif__mounts").innerHTML = remainingMonths;
+    document.querySelector(".js-interractif__years").innerHTML = remainingYears;
     document.querySelector(".c-interractif__display").style.display = "block";
 }
